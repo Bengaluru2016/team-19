@@ -1,0 +1,106 @@
+<?php 
+session_start();
+error_reporting(E_ALL & ~E_NOTICE);
+session_start();
+error_reporting(E_ALL & ~E_NOTICE);
+?>
+<html lang="en">
+<head>
+  <title>Vill</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Upload Learning Resourse</h2>
+  
+  <form role="form" action="http://localhost/jpmc/uploadaction.php" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="inputdefault">Content Name</label>
+      <input class="form-control" name = "contentname" id="contentname" type="text">
+    </div>
+    <div class="form-group">
+      <label for="inputlg">Content Details</label>
+      <input class="form-control input-lg" name ="contentdetails" id="contentdetails" type="text">
+    </div>
+    
+    <div class="form-group">
+      <label for="sel1">Content Type</label>
+      <select class="form-control" id="contenttype" onchange="contenttypeselected()">
+        <option value = "0">Video</option>
+        <option value = "1">pdf</option>
+        <option value = "1">text document</option>
+        </select>
+    </div>
+    <div id="contenttypevideo" >
+          
+      <label for="inputlg">Youtube Video Url</label>
+      <input class="form-control input-lg" id="contenttypevideourl" type="text">
+    </div>
+    <div id="contenttypedocument" style="display:none;">
+          
+      <input type=file name="document">
+    </div>
+
+   <div class="form-group">
+      <label for="sel2">Course Name</label>
+      <select class="form-control input-lg" id="categorytype">
+      <?php
+
+$con=mysqli_connect("localhost","root",""); 
+mysqli_select_db($con,"vill");
+if(!$con)
+{
+  echo "<script>
+    alert('something went wrong');
+    window.location.href='home.html';
+    </script>";
+}
+$query= "SELECT * FROM course";
+$result=mysqli_query($con,$query);
+while ($row=mysqli_fetch_array($result)) {
+            echo " <option> ".$row['course_name']."</option>";
+            }
+?>
+      
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="sel3">User Type</label>
+      <select class="form-control input-sm" id="usertype">
+             <option>all</option>
+             <option>staff</option>
+             <option>mentors</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="inputlg">Points</label>
+      <input class="form-control input-lg" id="points" type="number">
+    </div>
+    <button type="submit" class="btn btn-success" >Upload</button>
+  </form>
+</div>
+<script>
+function contenttypeselected() {
+    var x = document.getElementById("contenttype").value;
+    var e = document.getElementById("contenttypevideo");
+    var f = document.getElementById("contenttypedocument");
+    if(x == "Video")
+    {
+         f.style.display = (e.style.display == 'block') ? 'none' : 'none';
+    e.style.display = 'block';
+    }
+    else
+    {
+        e.style.display = (e.style.display == 'block') ? 'none' : 'none';
+    f.style.display = 'block';
+    }
+}
+</script>
+
+</body>
+</html>
