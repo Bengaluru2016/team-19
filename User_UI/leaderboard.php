@@ -84,14 +84,47 @@
 				<div class="panel panel-default">
 					<!--div class="panel-heading">Basic Table</div>-->
 					<div class="panel-body">
-						<table data-toggle="table" data-url="tables/data2.json" >
+						<table data-toggle="table" >
 						    <thead>
 						    <tr>
-						        <th data-field="id" data-align="right">Item ID</th>
-						        <th data-field="name">Item Name</th>
-						        <th data-field="price">Item Price</th>
+						        <th>User</th>
+						        <th >Points</th>
+						        
 						    </tr>
-						    </thead>
+							</thead>
+							<div id="left" name="leaderboard" class="col-sm-6">
+	 <?php
+        $servername = "localhost";
+		$username = "root";
+		$password = "";
+		$dbname = "villlearn";
+
+		// Create connection
+		$conn = new mysqli($servername, $username, $password, $dbname);
+		// Check connection
+		if ($conn->connect_error) {
+		die("Connection failed: " . $conn->connect_error);
+		} 
+
+
+	$cid=1;
+
+	echo "Leaderboard for course $cid";
+
+
+	$sql="select * from points_table where c_id=$cid ORDER by points DESC ";
+	$result = $conn->query($sql);
+
+	$result_length = mysqli_num_rows($result);	
+	//echo "<table><tr><th>User</th><th>Points</th></tr>";
+	for($i = 0; $i < $result_length; $i++)
+	{
+     $row = mysqli_fetch_array($result);
+     echo "<tr><td>" . $row["uname"]. "</td><td>" . $row["score"]. "</td></tr>";
+    }
+    ?>
+   </div>
+						    
 						</table>
 					</div>
 				</div>
