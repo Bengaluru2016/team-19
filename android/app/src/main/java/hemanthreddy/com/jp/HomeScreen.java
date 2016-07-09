@@ -1,5 +1,6 @@
 package hemanthreddy.com.jp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
@@ -47,6 +48,8 @@ public class HomeScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(),"course",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(),VideoActivity.class);
+                startActivity(intent);
             }
         });
     }
