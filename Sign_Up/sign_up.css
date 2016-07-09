@@ -1,0 +1,193 @@
+body {
+  background-image: url(img/signup.jpg);
+}
+h1 {
+ margin-top: 5px;
+ text-align: center;
+ text-decoration: none;
+ font-family: sans-serif;
+}
+
+div.header ul {
+    list-style-type: none;
+    margin: 10;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+div.header li {
+    float: left;
+   /* margin-left: 0; */
+
+}
+
+div.header li a {
+    margin-bottom: 5px;
+    border: 1px solid white;
+    border-radius: 5px;
+    display: inline-block;
+    color: white;
+    width: 80px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+div.header li a:hover {
+  border-radius: 5px;
+    background-color: #e6e6ff;
+    color: blue;
+}
+div.header li a.active
+{
+  border-radius: 5px;
+  background-color: #e6e6ff;
+  color: blue;
+}
+div#head
+{
+  color:  #e6e6ff;
+  text-transform: uppercase;
+  word-spacing: 10px;
+  float: left;
+  width: 600px;
+  margin: 0;
+  padding: -15px 1px;
+}
+
+div.transboblue#aaa h1
+{
+  background-color: white;
+}
+div#footer h3
+{
+  background-color: #2d2d86;
+  color: #cff;
+  padding:10px;
+  text-align: center; 
+}
+div#form
+{
+  float: right;
+}
+p
+{
+  font-family: sans-serif;;
+  font-size: 15px;
+  word-spacing:10px;
+  letter-spacing: 1px;
+  line-height: 25px;
+}
+
+input[type=text] {
+    margin-top: 10px;
+    width: 300px;
+    margin-right: 10px;
+      margin-left: 27px;
+    box-sizing: border-box;
+    border: 2px solid blue;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+}
+input[type=email],input[type=date],input[type=number] {
+    margin-top: 10px;
+    width: 300px;
+    margin-right: 10px;
+      margin-left: 27px;
+    box-sizing: border-box;
+    border: 2px solid blue;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+}
+select{
+ margin-top: 10px;
+    width: 300px;
+    margin-right: 10px;
+      margin-left: 27px;
+    box-sizing: border-box;
+    border: 2px solid blue;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;  
+}
+textarea {
+  margin-top: 10px;
+  margin-left: 27px;
+    width: 300px;
+    height: 150px;
+    box-sizing: border-box;
+    border: 2px solid blue;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    font-size: 16px;
+    resize: none;
+    padding: 12px 20px 12px 40px;
+}
+input[type=password] {
+  margin-top: 10px;
+    width: 300px;
+    margin-right: 10px;
+    margin-left: 27px;
+    box-sizing: border-box;
+    border: 2px solid blue;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+}
+button
+{
+    margin-top: 10px;
+    width: 150px;
+    margin-right: 10px;
+    margin-left: 100px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 2px solid white;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: transparent;
+    color: black;
+    padding: 12px 20px 12px 20px;
+}
+button:hover
+{
+  background-color: black;
+  color: orange;
+}
+div.selector div#reg
+{
+ margin-left: 270px;
+  float: left;
+  width: 350px;
+  background-color: transparent;
+  height: 100%;
+
+}
+div#chitra{
+    height:30px;
+    width:300px;
+    position:relative;
+}
+img#chitra1 {
+
+}
+.koti{
+  width: 300px;
+  margin: auto;
+}
