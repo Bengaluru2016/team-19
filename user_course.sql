@@ -29,7 +29,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `user_course` (
   `uname` varchar(30) NOT NULL,
   `c_id` int(5) NOT NULL,
-  `status` int(1) NOT NULL
+  `status` int(1) NOT NULL,
+  `points` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
