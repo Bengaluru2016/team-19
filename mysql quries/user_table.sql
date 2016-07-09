@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 09, 2016 at 01:05 AM
+-- Generation Time: Jul 09, 2016 at 01:41 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.21
 
@@ -30,7 +30,7 @@ CREATE TABLE `user_table` (
   `name` varchar(30) NOT NULL,
   `contact` int(10) NOT NULL,
   `user_type` int(1) NOT NULL,
-  `uname` int(15) NOT NULL,
+  `uname` varchar(30) NOT NULL,
   `pwd` int(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
