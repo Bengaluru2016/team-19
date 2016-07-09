@@ -1,5 +1,6 @@
 <?php require_once 'config.php';
 	require 'connect.php';
+	session_start();
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +40,7 @@ $(document).ready(function(){
     function submit(){
 	     $.ajax({
 						type: "POST",
-						url: "ajax.php",
+						url: "goliajax.php",
 						data: $('form').serialize(),
 						success: function(msg) {
 						  $("#quiz_form,#demo1").addClass("hide");
@@ -67,6 +68,8 @@ $(document).ready(function(){
 </script>
 
 <script type="text/javascript">(function (){return window.SIG_EXT={}})()</script></body></html>
+
+   
 	</head>
 
 	<body>
@@ -92,7 +95,7 @@ $(document).ready(function(){
 						<br/>
 						<input type="radio" value="4" id='radio4_<?php echo $result['id'];?>' name='<?php echo $result['id'];?>'>
 						<label id='ans4_<?php echo $result['id'];?>' for='1'><?php echo $result['answer4'];?></label>
-						<input type="radio" checked='checked' value="5" style='display:none' id='radio4_<?php echo $result['id'];?>' name='<?php 																			echo $result['id'];?>'>
+						<input type="radio" checked='checked' name="unans" value="5" style='display:none' id='radio4_<?php echo $result['id'];?>' name='<?php 																			echo $result['id'];?>'>
                     </div>
 					<br/>
                 <input type="button" id='next<?php echo $result['id'];?>' value='Next!' name='question' class='butt'/>
@@ -106,5 +109,9 @@ $(document).ready(function(){
 </div>
 
 <div id="demo1" class="demo" style="text-align:center;font-size: 25px;">00:00:00</div>
+
+<form action="goliajax.php">
+ <input type="submit" name="submit" value="result">
+</form>
 	</body>
 </html>	
