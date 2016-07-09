@@ -64,9 +64,9 @@ $response=mysqli_query($con,$query);
 	 $wrong_answer=0;
 	 $unanswered=0;
 	 while($result=mysqli_fetch_array($response)){ 
-	       if($result['answer']==$i){
+	       if($result['answer']==1){
 		       $right_answer++;
-		   }else if($_POST[$i]==5){
+		   }else if($result['answer']==5){
 		       $unanswered++;
 		   }
 		   else{
@@ -91,15 +91,15 @@ $response=mysqli_query($con,$query);
       function drawChart() {
 		//alert("hi");
         var data = google.visualization.arrayToDataTable([
-          ['right answers',   "60"],
-          ['wrong answers',     "40"],
-          ['unanswered',  "20"],
+          ['right answers', '57'],
+          ['wrong answers', '25' ],
+          ['unanswered',  '18' ],
         ]);
 
         var options = {
           title: 'Completion Report',
 		  //is3D: true,
-		  colors: ['green','yellow','red'],
+		  colors: ['red','yellow','green'],
 		 // color:'black'
         };
 
