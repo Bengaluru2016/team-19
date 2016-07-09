@@ -111,7 +111,7 @@
 	echo "Leaderboard for course $cid";
 
 
-	$sql="select * from points_table where c_id=$cid ORDER by points DESC ";
+	$sql="select * from pointstable where c_id=$cid ORDER by points DESC ";
 	$result = $conn->query($sql);
 
 	$result_length = mysqli_num_rows($result);	
