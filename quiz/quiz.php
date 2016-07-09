@@ -68,8 +68,6 @@ $(document).ready(function(){
 </script>
 
 <script type="text/javascript">(function (){return window.SIG_EXT={}})()</script></body></html>
-
-   
 	</head>
 
 	<body>
@@ -77,10 +75,12 @@ $(document).ready(function(){
 
 		<?php 
 		$query = "select * from questions";
-		$response=mysqli_query($con,$query);?>
+		$response=mysqli_query($con,$query);
+		?>
 
 		<form method='post' id='quiz_form'>
 			<?php while($result=mysqli_fetch_array($response)){ ?>
+			
 			<div id="question_<?php echo $result['id'];?>" class='questions'>
 				<h2 id="question_<?php echo $result['id'];?>"><?php echo $result['id'].".".$result['question_name'];?></h2>
 					<div class='align'>
