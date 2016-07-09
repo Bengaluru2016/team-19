@@ -96,4 +96,12 @@ $(document).ready(function(){
             </div>
             <?php }?>
 		</form>
-		
+		<div id="result">
+		<font size="6">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;Result</font>
+<!--<img src="./Demo Quiz Application using PHP, MySQL, jQuery and Ajax_files/results.jpg" alt="Results">-->
+<br>
+</div>
+
+<div id="demo1" class="demo" style="text-align:center;font-size: 25px;">00:00:17</div>
+	</body>
+</html>	
