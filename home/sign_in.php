@@ -31,7 +31,7 @@ if (isset($_POST['email']) && isset($_POST['password']))
 					{
 						$update_login = "UPDATE user_info SET loggedin='1' WHERE user_mail='$email1';";
 						$update_login_result=mysqli_query($con,$update_login);
-						header("location:Admin_UI/admin_dashboard.html");
+						header("location:User_UI/user_dashboard.html");
 					}
 		}
 		else

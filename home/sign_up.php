@@ -230,7 +230,7 @@ else
           <option value="staff">Staff</option>
           <option value= "mentor">Mentor </option>
         </select><br><br>
-  			<button type="submit" class="btn-success">REGISTER</button>
+  			<button type="submit" class="btn-success" >REGISTER</button>
 			</form><br><br>
 		</div> 
 	</center>
