@@ -12,7 +12,7 @@
         <EditText
             android:layout_width="320dp"
             android:layout_height="60dp"
-            android:inputType="number"
+            android:inputType="textEmailAddress"
             android:ems="10"
             android:id="@+id/email"
             android:layout_weight="1"

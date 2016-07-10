@@ -11,7 +11,9 @@ import android.widget.Toast;
 
 import com.daasuu.ahp.AnimateHorizontalProgressBar;
 import com.roughike.bottombar.BottomBar;
+import com.roughike.bottombar.BottomBarBadge;
 import com.roughike.bottombar.BottomBarTab;
+import com.roughike.bottombar.OnTabSelectedListener;
 
 public class HomeScreen extends AppCompatActivity {
     AnimateHorizontalProgressBar courseStatus;
@@ -25,7 +27,7 @@ public class HomeScreen extends AppCompatActivity {
         view = (TextView) findViewById(R.id.dashboard_course_name);
         courseStatus = (AnimateHorizontalProgressBar) findViewById(R.id.h);
         courseStatus.setMax(1000);
-        courseStatus.setProgress(500);
+        courseStatus.setProgress(233);
         courseStatus.setAnimateProgressListener(new AnimateHorizontalProgressBar.AnimateProgressListener() {
             @Override
             public void onAnimationStart(int progress, int max) {
@@ -43,6 +45,24 @@ public class HomeScreen extends AppCompatActivity {
                 new BottomBarTab(R.mipmap.ic_action_appointment_reminders_242,"notifications"),
                 new BottomBarTab(R.mipmap.ic_action_profile,"profile")
         );
+        BottomBarBadge message = bottomBar.makeBadgeForTabAt(1,"red",10);
+        message.show();
+        bottomBar.setOnItemSelectedListener(new OnTabSelectedListener() {
+            @Override
+            public void onItemSelected(int position) {
+                Toast.makeText(getApplicationContext(),""+position, Toast.LENGTH_LONG).show();
+             if(position == 2)
+             {
+                 Intent intent = new Intent(getApplicationContext(),Profile.class);
+                 startActivity(intent);
+             }
+                else if(position == 1)
+             {
+                 Intent intent = new Intent(getApplicationContext(),Notifications.class);
+                 startActivity(intent);
+             }
+            }
+        });
         cardView = (CardView) findViewById(R.id.card_view);
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
