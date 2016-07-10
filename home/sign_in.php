@@ -120,7 +120,7 @@
         <!-- /.container-fluid -->
     </nav>
 
-    <!-- Header -->
+    <!-- Header
     <header>
         <div class="container">
             <div class="row">
@@ -136,7 +136,7 @@
         </div>
     </header>
 
-    <!-- Portfolio Grid Section -->
+    <!-- Portfolio Grid Section
     <section id="portfolio">
         <div class="container">
             <div class="row">
@@ -165,7 +165,7 @@
                         </div>
                         <img src="img/portfolio/cake.png" class="img-responsive" alt="">
                     </a>
-                </div>-->
+                </div>
 				
                 <div class="col-sm-6 portfolio-item">
                     <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
@@ -211,7 +211,7 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About Section
     <section class="success" id="about">
         <div class="container">
             <div class="row">
@@ -232,7 +232,7 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Section 
     <section id="contact">
         <div class="container">
             <div class="row">
@@ -243,8 +243,8 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. 
+                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently.
                     <form name="sentMessage" id="contactForm" novalidate>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
@@ -285,8 +285,37 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
+    <div class="container">
+	<section id="portfolio">
+	<center>
+      <form action="sign_in.php" method="POST">
+	  <br><br><br><br><br>
+        <h2 >Sign in</h2>
+		<br><br>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="" style="width:300px">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="" style="width:300px">
+		<br>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" style="width:100px">Sign in</button>
+      </form>
+	</center>
+    </div> <!-- /container -->
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./Signin Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
+  
+
+<script type="text/javascript">(function (){return window.SIG_EXT={}})()</script>
+	</section>
     <!-- Footer -->
     <footer class="text-center">
         <div class="footer-above">
