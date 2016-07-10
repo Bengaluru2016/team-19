@@ -136,7 +136,7 @@ if (isset($_POST['email']) && isset($_POST['password']))
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="#page-top">Vill Learn</a>
+                <a class="navbar-brand" href="index.html">Vill Learn</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -162,10 +162,10 @@ if (isset($_POST['email']) && isset($_POST['password']))
                         <a href="#portfolio">Categories</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about">About</a>
+                        <a href="index.html#about">About</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#contact">Contact</a>
+                        <a href="index.html#contact">Contact</a>
                     </li>
                 </ul>
             </div>
