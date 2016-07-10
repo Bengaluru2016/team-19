@@ -30,7 +30,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Couse Name : "
+                android:text="Couse Name : Non Renewable Resources"
                 android:id="@+id/dashboard_course_name"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentStart="true"
@@ -91,7 +91,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Welcome To Villgro"
+        android:text="Welcome To VillGro"
         android:id="@+id/textView4"
 
         android:gravity="center"

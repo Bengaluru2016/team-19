@@ -1,17 +1,121 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="hemanthreddy.com.jp.VideoActivity">
+    android:fillViewport="true">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
     <com.google.android.youtube.player.YouTubePlayerView
         android:id="@+id/youtube_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Non Renewable Resources"
+        android:id="@+id/textView10"
+        android:layout_below="@+id/youtube_view"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Published on Nov 27, 2012  Episode 2: Continuing with Environmental Science, we&apos;ll be taking a look at some of the non-renewable energy sources and their benefits and drawbacks"
+        android:id="@+id/textView11"
+        android:layout_below="@+id/textView10"
+        android:layout_alignParentStart="true" />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#c0c0c0"
+        android:layout_below="@+id/textView11"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/view"
+        android:paddingStart="10dp"
+        android:layout_marginLeft=" 20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Comments"
+        android:id="@+id/textView12"
+        android:layout_below="@+id/view"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:hint="Add Comment"
+        android:layout_below="@+id/textView12"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Ubale : Nice Informative Video"
+        android:id="@+id/textView13"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentStart="true" />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#c0c0c0"
+        android:layout_below="@+id/textView13"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/view1"
+        android:paddingStart="10dp"
+        android:layout_marginLeft=" 20dp"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="More Videos"
+        android:id="@+id/textView14"
+        android:layout_below="@+id/view1"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Agriculture Videos"
+        android:id="@+id/b1"
+        android:layout_below="@+id/textView14"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:padding="5dp"
+        android:paddingBottom="10dp" />
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Educational Videos"
+        android:id="@+id/b2"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:padding="5dp"
+        android:paddingTop="10dp"
+        android:layout_below="@+id/b1"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/b1"
+        android:layout_marginTop="10dp" />
 </RelativeLayout>
+</ScrollView>

@@ -39,9 +39,9 @@ public class HomeScreen extends AppCompatActivity {
         });
         bottomBar = BottomBar.attach(this,savedInstanceState);
         bottomBar.setItems(
-                new BottomBarTab(R.drawable.ic_media_play,"groups"),
-                new BottomBarTab(R.drawable.ic_cast_light,"notifications"),
-                new BottomBarTab(R.drawable.ic_cast_dark,"profile")
+                new BottomBarTab(R.drawable.ic_cast_light,"Dashboard"),
+                new BottomBarTab(R.mipmap.ic_action_appointment_reminders_242,"notifications"),
+                new BottomBarTab(R.mipmap.ic_action_profile,"profile")
         );
         cardView = (CardView) findViewById(R.id.card_view);
         cardView.setOnClickListener(new View.OnClickListener() {
